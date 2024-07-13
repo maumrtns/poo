@@ -8,12 +8,21 @@ public class Carro {
     int combustivel;
     int kmPorLitros;
 
-    void abastercer(int litros){
-        combustivel = combustivel + litros;
+    int abastercer(int litros) {
+        int soma = combustivel + litros;
+        if (soma > capacidadeTanque) {
+            combustivel = capacidadeTanque;
+            int sobra = soma - capacidadeTanque;
+            return sobra;
+        } else {
+            combustivel = soma;
+            return 0;
+        }
     }
 
-    int autonomiaCombustivel(){
-        int autonomia = kmPorLitros * combustivel;
-        return autonomia;
-    }
+
+int autonomiaCombustivel() {
+    int autonomia = kmPorLitros * combustivel;
+    return autonomia;
+}
 }

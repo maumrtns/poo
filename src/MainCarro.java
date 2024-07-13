@@ -19,14 +19,23 @@ public class MainCarro {
         civic.combustivel = 10;
         civic.kmPorLitros = 8;
 
-        System.out.println("Punto: " + punto.combustivel);
-        System.out.println("Civic: " + civic.combustivel);
+        System.out.println("Situaçao do Tanque - Punto: " + punto.combustivel);
+        System.out.println("Situaçao do Tanque - Civic: " + civic.combustivel);
 
+        System.out.println("Abastecendo 20 litros no Punto");
         punto.abastercer(20);
-        civic.abastercer(30);
+        System.out.println("Abastecendo 50 litros no Punto");
+        int sobraPunto = punto.abastercer(50);
 
-        System.out.println("Punto, depois de abastecer: " + punto.combustivel);
-        System.out.println("Civic, depois de abastecer: " + civic.combustivel);
+        System.out.println("Abastecendo 30 litros no Civic");
+        civic.abastercer(30);
+        System.out.println("Abastecendo 100 litros no Civic");
+        int sobraCivic = civic.abastercer(100);
+
+        System.out.println("Punto, depois de abastecer: " +
+                punto.combustivel + " , sobrou " + sobraPunto);
+        System.out.println("Civic, depois de abastecer: " +
+                civic.combustivel + " , sobrou " + sobraCivic);
 
         System.out.println("Autonomia Punto: " + punto.autonomiaCombustivel());
         System.out.println("Autonomia Civic: " + civic.autonomiaCombustivel());
