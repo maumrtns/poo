@@ -5,10 +5,9 @@ public class Main {
         
         Cliente fulano = new Cliente("01234567890","Fulano");
 
-        Conta contaFulano = new Conta();
-        contaFulano.titular = fulano;
-        contaFulano.numero = 1000;
-        contaFulano.saldo = 50;
+        Conta contaFulano = new Conta(fulano, 1000, 50);
+
+        System.out.println("Saldo da conta fulano: " + contaFulano.saldo);
 
         Banco sistemaBancario = new Banco();
 
