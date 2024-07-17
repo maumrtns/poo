@@ -3,9 +3,7 @@ package sistemabancario;
 public class Main {
     public static void main(String[] args) {
         
-        Cliente fulano = new Cliente();
-        fulano.nome = "Fulano";
-        fulano.cpf = "01234567890";
+        Cliente fulano = new Cliente("01234567890","Fulano");
 
         Conta contaFulano = new Conta();
         contaFulano.titular = fulano;
