@@ -7,7 +7,7 @@ public class Main {
 
         Conta contaFulano = new Conta(fulano, 1000, 50);
 
-        System.out.println("Saldo da conta fulano: " + contaFulano.obterSaldo());
+        System.out.println("Saldo da conta fulano: " + contaFulano.getSaldo());
 
         Banco sistemaBancario = new Banco();
 
@@ -31,14 +31,13 @@ public class Main {
         contaFulano.imprimirSaldo();
 
         Cliente cicrano = new Cliente();
-        cicrano.nome = "Cicrano";
-        cicrano.cpf = "9874563210";
+        cicrano.setNome("Cicrano");
+        cicrano.setCpf("9874563210");
 
         Conta contaCicrano = new Conta(cicrano, 2000, 0);
-        contaCicrano.titular = cicrano;
-        contaCicrano.numero = 2000;
 
-        contaCicrano.modificarSaldo(50);
+
+        contaCicrano.setSaldo(50);
         contaCicrano.imprimirSaldo();
 
         System.out.println("Transferindo 120 reais para o Cicrano");
