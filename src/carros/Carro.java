@@ -23,8 +23,8 @@ public class Carro {
     }
 
 
-int autonomiaCombustivel() {
-    int autonomia = kmPorLitros * combustivel;
-    return autonomia;
-}
+    int autonomiaCombustivel() {
+        int autonomia = kmPorLitros * combustivel;
+        return autonomia;
+    }
 }

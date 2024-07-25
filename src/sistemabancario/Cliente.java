@@ -2,33 +2,41 @@ package sistemabancario;
 
 public class Cliente {
 
+    public static int quantidadeClientes;
+
     private String cpf;
     private String nome;
 
-
-    //Construtor padrão
-    Cliente(){}
+    public Cliente() {
+        incrementarClientes();
+    }
 
     //Construtor
-    Cliente(String cpf, String nome){
+    Cliente(String cpf, String nome) {
         this.cpf = cpf;
         this.nome = nome;
+        incrementarClientes();
+
     }
+
     //padrão get e set
-    public void setCpf(String cpf ){
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public String getCpf(){
+    public String getCpf() {
         return this.cpf;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getNome(){
+    public String getNome() {
         return this.nome;
     }
 
+    public static void incrementarClientes(){
+        Cliente.quantidadeClientes++;
+    }
 }

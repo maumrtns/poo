@@ -1,9 +1,12 @@
 package sistemabancario;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Cliente fulano = new Cliente("01234567890", "Fulano");
+
+        Cliente.quantidadeClientes = 1;
 
         Conta contaFulano = new Conta(fulano, 1000, 50);
 
@@ -45,5 +48,9 @@ public class Main {
 
         contaFulano.imprimirSaldo();
         contaCicrano.imprimirSaldo();
+
+
+
+        System.out.println("Quantidade Clientes: " + Cliente.quantidadeClientes );
     }
 }
